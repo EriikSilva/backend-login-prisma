@@ -1,0 +1,30 @@
+# version: "3"
+# services:
+#   db-postgres:
+#     image: postgres:alpine
+#     ports:
+#       - "5432:5432"
+#       container_name: "db-postgres"
+#       restart: always
+#       volumes:
+#         - ./backup-teste:/var/lib/postgresql/data
+#       environments:
+#         POSTGRES_USER: pguser
+#         POSTGRES_PASSWORD: pgpassword
+        
+# volumes:
+#  db-postgres:
+
+version: '3'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    volumes:
+      - ./data:/var/lib/postgresql/data
